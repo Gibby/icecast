@@ -1,9 +1,9 @@
 FROM alpine:latest
-LABEL maintainer "infiniteproject@gmail.com"
+LABEL maintainer "git@twoitguys.com"
 
 RUN addgroup -S icecast && \
     adduser -S icecast
-    
+
 RUN apk add --update \
         icecast \
         mailcap && \

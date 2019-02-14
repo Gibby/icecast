@@ -21,6 +21,9 @@ fi
 if [ -n "$ICECAST_HOSTNAME" ]; then
     sed -i "s/<hostname>[^<]*<\/hostname>/<hostname>$ICECAST_HOSTNAME<\/hostname>/g" /etc/icecast.xml
 fi
+if [ -n "$ICECAST_PORT" ]; then
+    sed -i "s/<port>[^<]*<\/port>/<port>$ICECAST_PORT<\/port>/g" /etc/icecast.xml
+fi
 if [ -n "$ICECAST_MAX_CLIENTS" ]; then
     sed -i "s/<clients>[^<]*<\/clients>/<clients>$ICECAST_MAX_CLIENTS<\/clients>/g" /etc/icecast.xml
 fi
